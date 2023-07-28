@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./style.css";
 let date = document.querySelector("#today");
 
 let currentDate = new Date();
