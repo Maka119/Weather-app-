@@ -1,61 +1,126 @@
-p {
-  font-weight: 500;
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-image: url(https://wallpapers.com/images/featured/weather-xqhs9axpy8btfd3y.webp);
   text-align: center;
-  font-size: 30px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.container {
+h1 {
+  font-weight: 500;
+  font-size: 100px;
+  color: #050505;
+  font-family: "Times New Roman", Times, serif;
+}
+h2 {
+  font-weight: 500;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+li {
+  color: rgb(12, 12, 12);
+  font-size: 20px;
+  font-weight: bold;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li::first-letter {
+  text-transform: uppercase;
+}
+
+.weather-app {
   border: #0a0a0a;
   margin: 0px;
-  width: 1200px;
+  width: 1500px;
   height: 600px;
-  background: #aceceec4;
   border: 3px solid;
-  border-radius: 8px;
-  max-width: 700px;
+  border-radius: 4px;
+  max-width: 900px;
   margin: 70px auto;
-  padding: 15px 10px;
+  padding: 30px 10px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-image: url(https://th.bing.com/th/id/R.bab176309f248ea377312e4a8b3fa083?rik=lqUT17VVLc1Kbw&pid=ImgRaw&r=0);
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-body {
+
+.weather-box {
+  max-width: 800px;
+
+  margin: 70px auto;
+}
+
+.weather-details {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.weather-temperature img {
+  margin-right: 15px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature #temperature {
+  color: rgb(32, 33, 36);
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+}
+.weather-temperature .units {
   position: relative;
+  font-size: 16px;
+  bottom: -5px;
+}
+a {
+  text-decoration: none;
+  font-size: medium;
+}
+
+.weather-temperature .active {
+  color: rgb(32, 33, 36);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 50px;
   text-align: center;
-  box-sizing: border-box;
-
-  border-radius: 0px;
-}
-body {
-  background-image: url(https://wallpapers.com/images/featured/weather-xqhs9axpy8btfd3y.webp);
+  color: #000;
 }
 
-.extrastats {
-  border-radius: solid;
-  padding: 20px;
-  margin-left: auto;
+.weather-forecast-date {
+  font-size: 3cqb;
+  opacity: 0.8;
 }
-.card-body {
-  background: linear-gradient(
-    114.2deg,
-    rgb(121, 194, 243) 22.6%,
-    rgb(255, 180, 239) 67.7%
-  );
-  border-radius: solid;
-  border: #0a0a0a;
+.weather-temp-min {
+  opacity: 0.5;
 }
-.searchEngine {
-  width: 60%;
-  margin-bottom: 120px;
-  padding-left: 70px;
+.weather-forecast-temp {
+  font-size: 30px;
 }
-.button {
-  margin-left: 750px;
-  margin-bottom: 100px;
-  color: black;
-  background-color: aliceblue;
+#city-input,
+#submit-btn {
+  border-radius: 10px;
 }
-#temp-list {
-  font-size: 50px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+#submit-btn {
+  color: #000;
+  background-color: rgba(240, 10, 171, 0.654);
+}
+.source-code {
+  font-size: 12px;
+  padding-top: 20px;
 }

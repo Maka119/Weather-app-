@@ -12,97 +12,72 @@
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
-		/>
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        
- </head>
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
   <body>
-    <div class="search">
-			<form id="form-search">
-				<input
-					type="search"
-					placeholder="Search city"
-					id="city-input"
-				/>
-				<input type="submit" value="search" />
-				<input
-					type="submit"
-					value="current location"
-					id="location-input"
-				/>
-			</form>
-		</div>
-
-      <div class="container">
-					<div id="temp-list">
-         <span id="current-city" > </span> <br/>
-        <span id="today"></span><br/>
-				<span id ="temp">  </span> <span class="units">°C</span>
-					</div>
-
-        <div class="weather">
-          <div class="row">
-            <div class="col">
-              <p>
-                <b>Mon</b>
-                <br />
-                14°|25°
-                <br />
-                ☀️
-              </p>
-            </div>
-            <div class="col">
-              <p>
-                <b>Tue</b>
-                <br />
-                10°|11°
-                <br />
-                🌧️
-              </p>
-            </div>
-            <div class="col">
-              <p>
-                <b>Wed</b>
-                <br />
-                16°|23°
-                <br />
-                🌤️
-              </p>
-            </div>
-            <div class="col">
-              <p>
-                <b>Thurs</b>
-                <br />
-                19°|26°
-                <br />
-                ☀️
-              </p>
-            </div>
-            <div class="col">
-              <p>
-                <b>Fri</b>
-                <br />
-                7°|19°
-                <br />
-                🌧️
-              </p>
-            </div>
-            <div class="extrastats">
-              <div class="col-md-4">
-                <div class="card today">
-                  <div class="card-body">
-                    Precipitation: 10% <br />
-                    Wind: 10 kmph <br />
-                    Humidity: 54% <br />
-                  </div>
-                </div>
+    <div class="container">
+      <div class="weather-box">
+        <div class="weather-app">
+          <form id="search-form">
+            <div class="row mb-2">
+              <div class="col-9">
+                <input
+                  type="text"
+                  placeholder="Search for a city..."
+                  autocomplete="off"
+                  autofocus="on"
+                  class="form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                  id="submit-btn"
+                />
               </div>
             </div>
+          </form>
+          <div class="weather-details">
+            <h1 id="CurrentCity">Durban</h1>
+            <h2 id="today"></h2>
+            <ul>
+              <li>Last updated: <span id="time"></span></li>
+              <li id="description">Partly Cloudy with a chace of rain</li>
+            </ul>
           </div>
+          <div class="row">
+            <div class="col-6 mt-3">
+              <div class="d-flex weather-temperature">
+                <img src="" alt="clear sky" id="icon" />
+                <strong id="temperature">18</strong>
+                <span class="units">
+                  <a href="#" id="celsius-unit" class="active">°C</a> |
+                  <a href="#" id="far-unit">°F</a>
+                </span>
+              </div>
+            </div>
+            <div class="col-6 mt-3">
+              <ul class="weather-condition">
+                <li>Humidity : <span id="humidity"></span> %</li>
+                <li>Wind-speed : <span id="wind"></span> mph</li>
+              </ul>
+            </div>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small><a href="https://github.com/Maka119/Weather-app-" target="_blank">Open-source code</a>, by Makanaka G</small>
+        <div class="source-code">
+          <strong
+            ><a href="https://github.com/Maka119/Weather-app-" target="_blank"
+              >Open-source code</a
+            >, by Makanaka G</strong
+          >
+        </div>
       </div>
     </div>
- <script src="src/index.js"> </script>
+    <script src="src/index.js"></script>
   </body>
 </html>
