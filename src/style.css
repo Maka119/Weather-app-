@@ -40,7 +40,7 @@ li::first-letter {
 .weather-app {
   border: #0a0a0a;
   margin: 0px;
-  width: 1500px;
+  width: 1300px;
   height: 600px;
   border: 3px solid;
   border-radius: 4px;
@@ -49,9 +49,8 @@ li::first-letter {
   padding: 30px 10px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   background-image: url(https://th.bing.com/th/id/R.bab176309f248ea377312e4a8b3fa083?rik=lqUT17VVLc1Kbw&pid=ImgRaw&r=0);
-
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .weather-box {
@@ -118,9 +117,11 @@ a {
 }
 #submit-btn {
   color: #000;
-  background-color: rgba(240, 10, 171, 0.654);
 }
 .source-code {
   font-size: 12px;
   padding-top: 20px;
+  border: #000;
+  border-radius: 0px;
+  background-color: rgb(198, 221, 241);
 }
