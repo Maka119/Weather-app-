@@ -1,20 +1,32 @@
-let date = document.querySelector("#today");
+function formatDate(timestamp) {
+  let date = document.querySelector("#today");
+  let currentDate = new Date(timestamp);
+  let hours = currentDate.getHours();
+  let minutes = currentDate.getMinutes();
+  let day = currentDate.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-let currentDate = new Date();
-let hours = currentDate.getHours();
-let minutes = currentDate.getMinutes();
-let day = currentDate.getDay();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+  date.innerHTML = `${days[day]} ${hours}:${minutes}`;
+  return `${days[day]} ${hours}:${minutes}`;
+}
 
-date.innerHTML = `${days[day]} ${hours}:${minutes}`;
+formatDate(new Date());
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 
 function showForecast(response) {
   let forecast = response.data.daily;
@@ -86,16 +98,13 @@ function showTemperature(response) {
   timeElement.innerHTML = formatDate(response.data.daily[0].time * 1000);
 
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("src", response.data.daily[0].condition.icon_url);
+  iconElement.setAttribute("alt", response.data.daily[0].condition.description);
 
-  getForecast(response.data.coordinates);
+  getForecast(response.data.city);
 }
 function search(city) {
-  let apiKey = "afc34890d5f2e69t9063";
+  let apiKey = "afc34890d5f2e69t9063c4e498283o2b";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
   console.log(apiUrl);
